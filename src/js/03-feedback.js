@@ -34,11 +34,11 @@ function makeLocalStorageData(e) {
 };
 
 function onSubmit(e) {
+  e.preventDefault();
   if(refs.inputEl.value === "" || refs.textAreaEl.value === "") {
     return alert ("Ops.. All lines must be filled!")
   } 
   else {
-  e.preventDefault();
   localStorage.removeItem(STORAGE_DATA);
   refs.formEl.reset();
   console.log(formData);
